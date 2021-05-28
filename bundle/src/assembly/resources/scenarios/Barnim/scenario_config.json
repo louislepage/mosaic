@@ -1,7 +1,7 @@
 {
     "simulation": {
         "id": "Barnim",
-        "duration": "1000s",
+        "duration": "500s",
         "randomSeed": 212323853,
         "projection": {
             "centerCoordinates": {
@@ -25,7 +25,7 @@
     },
     "federates": {
         "application": true,
-        "cell": false,
+        "cell": true,
         "environment": true,
         "sns": true,
         "ns3": false,

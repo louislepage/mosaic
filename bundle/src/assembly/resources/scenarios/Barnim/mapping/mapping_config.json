@@ -32,35 +32,29 @@
                 "longitude": 13.54500
             },
             "name": "WeatherServer",
-            "applications": [ "org.eclipse.mosaic.app.tutorial.WeatherServerApp" ]
+            "applications": [ "fcdtools.FcdReceiverApp" ]
         }
     ],
     "vehicles": [
         {
             "startingTime": 5.0,
             "targetFlow": 1800,
-            "maxNumberVehicles": 120,
+            "maxNumberVehicles": 10,
             "pos": 1417,
             "route": "1",
             "lanes": [ 0, 1 ],
             "types": [
                 {
-                    "applications": [ "org.eclipse.mosaic.app.tutorial.WeatherWarningAppCell", "org.eclipse.mosaic.app.tutorial.SlowDownApp" ],
+                    "applications": [ "fcdtools.FcdTransmitterApp", "fcdtools.FcdToLog"],
                     "name": "Car",
-                    "group": "Cellular",
+                    "group": "FcdEquipped",
+                    "weight": 0.9
+                },
+                {
+                    "applications": [ "fcdtools.datahelper.CalcOffsetApp" ],
+                    "name": "Car",
+                    "group": "FcdEquipped",
                     "weight": 0.1
-                },
-                {
-                    "applications": [ "org.eclipse.mosaic.app.tutorial.WeatherWarningApp", "org.eclipse.mosaic.app.tutorial.SlowDownApp" ],
-                    "name": "Car",
-                    "group": "AdHoc",
-                    "weight": 0.2
-                },
-                {
-                    "applications": [ "org.eclipse.mosaic.app.tutorial.SlowDownApp" ],
-                    "name": "Car",
-                    "group": "Unequipped",
-                    "weight": 0.7
                 }
             ]
         }

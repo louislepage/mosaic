@@ -40,6 +40,7 @@ public class HighwayManagementApp extends AbstractApplication<TrafficManagementC
 
     @Override
     public void onStartup() {
+
         // Find database file in application ambassador directory
         File[] dbFiles = getOs().getConfigurationPath().listFiles((f, n) -> n.endsWith(".db"));
 
